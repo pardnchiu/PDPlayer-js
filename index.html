@@ -9,38 +9,40 @@
   <script src="./js/PDYTPlayer.min.js" defer></script>
 </head>
 <body>
-  <div id="PDYTPlayer">
-    <script>
-      var PDYTPlayerConfig = {
-        videoId: "T2Y2qtlHFhg", //預設影片ID
-        volume: 10,     //預設音量
-        mute: false,    //啟用靜音
-        autoplay: false, //啟用自動播放
-        delay: 0,       //自動播放延遲秒數
-        panel: [        
-          "play",       //播放鍵
-          "timebar",    //進度條
-          "time",       //進度時間
-          "mute",       //靜音鍵
-          "volume",     //音量鍵
-          "rate",       //速率鍵
-          "full"        //影片
-        ]
-      };
-      
-      function onPDYTPlayerReady () {
-        console.log("準備完成")
-      };
-      function onPDYTPlayerStart () {
-        console.log("開始")
-      };
-      function onPDYTPlayerPause () {
-        console.log("暫停")
-      };
-      function onPDYTPlayerEnd () {
-        console.log("結束")
-      };
-    </script>
+  <div>
+    <div id="PDYTPlayer" class="full">
+      <script>
+        var PDYTPlayerConfig = {
+          videoId: "T2Y2qtlHFhg", //預設影片ID
+          volume: 10,     //預設音量
+          mute: false,    //啟用靜音
+          autoplay: false, //啟用自動播放
+          delay: 0,       //自動播放延遲秒數
+          panel: [        
+            "play",       //播放鍵
+            "timebar",    //進度條
+            "time",       //進度時間
+            "mute",       //靜音鍵
+            "volume",     //音量鍵
+            "rate",       //速率鍵
+            "full"        //影片
+          ]
+        };
+        
+        function onPDYTPlayerReady () {
+          console.log("準備完成")
+        };
+        function onPDYTPlayerStart () {
+          console.log("開始")
+        };
+        function onPDYTPlayerPause () {
+          console.log("暫停")
+        };
+        function onPDYTPlayerEnd () {
+          console.log("結束")
+        };
+      </script>
+    </div>
   </div>
 </body>
 </html>
