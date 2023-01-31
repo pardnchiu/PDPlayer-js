@@ -10,6 +10,8 @@
 
 且mobile 在playsinline 的狀態下可真正做到fullscreen<br>
 
+<br>
+
 
 ```
 var PDYTPlayerConfig = {
