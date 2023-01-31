@@ -4,8 +4,13 @@
 
 <br>
 
-簡易YTPlayer 控制器
-mobile playsinline 的狀態下也可真正fullscreen
+簡易YTPlayer 控制器<br>
+
+按鈕可自由添加減少、排列組合<br>
+
+且mobile 在playsinline 的狀態下可真正做到fullscreen<br>
+
+
 ```
 var PDYTPlayerConfig = {
   videoId: "UmR9zlez4OE", //預設影片ID
