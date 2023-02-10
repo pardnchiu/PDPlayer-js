@@ -8,38 +8,41 @@
   <link rel="stylesheet" href="./css/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="./css/PDYTPlayer.css">
   <link rel="stylesheet" href="./css/index.css">
-  <script src="./js/PDYTPlayer.min.js" defer></script>
+  <script src="./js/PDYTPlayer.js" defer></script>
 </head>
 <body>
   <div>
-    <div id="PDYTPlayer">
-      <script>
-        var PDYTPlayerConfig = {
-          videoId: "UmR9zlez4OE", //預設影片ID
-          volume: 10,             //預設音量
-          mute: false,            //預設靜音
-          panel: [        
-            "play",       //播放鍵
-            "timebar",    //進度條
-            "time",       //進度時間
-            "mute",       //靜音鍵
-            "volume",     //音量鍵
-            "rate",       //速率鍵
-            "full"        //影片
-          ]
-        };
-        
-        function onPDYTPlayerReady () {
-          console.log("準備完成")
-        };
-        function onPDYTPlayerStart () {
-          console.log("開始")
-        };
-        function onPDYTPlayerEnd () {
-          console.log("結束")
-        };
-      </script>
-    </div>
   </div>
+  <button id="test">插入PDYTPlayer</button>
+  <script>
+    document.getElementById("test").onclick = function (){
+      var player = PDYTPlayer({
+        videoId: "UmR9zlez4OE", //預設影片ID
+        volume: 10,             //預設音量
+        mute: false,            //預設靜音
+        panel: [        
+          "play",       //播放鍵
+          "timebar",    //進度條
+          "time",       //進度時間
+          "mute",       //靜音鍵
+          "volume",     //音量鍵
+          "rate",       //速率鍵
+          "full"        //影片
+        ]
+      });
+      document.body.children[0].appendChild(player)
+      onYouTubeIframeAPIReady()
+    }
+    
+    function onPDYTPlayerReady () {
+      console.log("準備完成")
+    };
+    function onPDYTPlayerStart () {
+      console.log("開始")
+    };
+    function onPDYTPlayerEnd () {
+      console.log("結束")
+    };
+  </script>
 </body>
 </html>
