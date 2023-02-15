@@ -18,6 +18,7 @@ var PDYTPlayerConfig = {
   videoId: "UmR9zlez4OE", //預設影片ID
   volume: 10,             //預設音量
   mute: false,            //預設靜音
+  live: true,             //直播影片
   panel: [        
     "play",       //播放鍵
     "timebar",    //進度條
