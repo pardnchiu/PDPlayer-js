@@ -15,10 +15,11 @@
   </div>
   <button id="test">插入PDYTPlayer</button>
   <script>
+    //https://www.youtube.com/watch?v=hNoeDi0G5Xo
     //https://www.youtube.com/watch?v=4Uc00FPs27M&ab_channel=%E5%85%AC%E8%A6%96%E7%B6%B2%E8%B7%AF%E7%9B%B4%E6%92%AD%E9%A0%BB%E9%81%93
     document.getElementById("test").onclick = function (){
       var player = PDYTPlayer({
-        videoId: "4Uc00FPs27M", //預設影片ID
+        videoId: "hNoeDi0G5Xo", //預設影片ID
         volume: 10,             //預設音量
         mute: false,            //預設靜音
         live: true,             //直播影片
@@ -29,7 +30,8 @@
           "mute",       //靜音鍵
           "volume",     //音量鍵
           "rate",       //速率鍵
-          "full"        //影片
+          "full",       //影片
+          // "cc"
         ]
       });
       document.body.children[0].appendChild(player)
