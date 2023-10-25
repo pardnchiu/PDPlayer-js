@@ -1,6 +1,6 @@
 # PDPlayer
 
-- Preview: [PDPlayer](https://pardnchiu.github.io/PDPlayer/)
+- Preview: [PDPlayer](https://pardnchiu.github.io/PDPlayer-js/)
 - Developer: [Pardn Chiu](mailto:chiuchingwei@icloud.com)
 - Icons: [Font Awesome 6](https://fontawesome.com)
 
