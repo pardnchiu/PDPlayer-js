@@ -1,4 +1,4 @@
-# PDYTPlayer
+# PDPlayer
 
 - Preview: [PDPlayer](https://pardnchiu.github.io/PDPlayer/)
 - Developer: [Pardn Chiu](mailto:chiuchingwei@icloud.com)
