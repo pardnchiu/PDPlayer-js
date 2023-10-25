@@ -14,6 +14,10 @@
 
 <br>
 
+```Javascript
+<script src="PDExtension.min.js" copyright="Pardn Ltd"></script>
+<script src="PDPlayer.min.js"></script>
+```
 
 ```Javascript
 const player = new PDPlayer({
