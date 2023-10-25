@@ -35,7 +35,21 @@
                             "volume",     //音量鍵
                             "rate",       //速率鍵
                             "full",       //影片
-                        ]
+                        ],
+                        event: {
+        ready: function() {
+            console.log("ready");
+        },
+        playing: function() {
+            console.log("playing");
+        },
+        pause: function() {
+            console.log("pause");
+        },
+        end: function() {
+            console.log("end");
+        }
+    }
                     });
                     document.body.children[0].innerHTML = "";
                     document.body.children[0].appendChild(player.body);

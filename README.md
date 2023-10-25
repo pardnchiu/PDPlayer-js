@@ -15,22 +15,39 @@
 <br>
 
 
-```
-var PDYTPlayerConfig = {
-  videoId: "UmR9zlez4OE", //預設影片ID
-  volume: 10,             //預設音量
-  mute: false,            //預設靜音
-  live: true,             //直播影片
-  panel: [        
-    "play",       //播放鍵
-    "timebar",    //進度條
-    "time",       //進度時間
-    "mute",       //靜音鍵
-    "volume",     //音量鍵
-    "rate",       //速率鍵
-    "full"        //影片
-  ]
-};
+```Javascript
+const player = new PDPlayer({
+    /* Youtube 影片ID 或 其他影片來源 */
+    videoId: "UmR9zlez4OE"
+    src: "/img/sample.mp4",
+    /* 預設參數 */
+    volume: 100,    //預設音量
+    mute: false,    //預設靜音
+    /* 控制器 */
+    panel: [
+        "play",     //播放鍵
+        "timebar",  //進度條
+        "time",     //進度時間
+        "mute",     //靜音鍵
+        "volume",   //音量鍵
+        "rate",     //速率鍵
+        "full",     //影片
+    ],
+    event: {
+        ready: function() {
+            console.log("ready");
+        },
+        playing: function() {
+            console.log("playing");
+        },
+        pause: function() {
+            console.log("pause");
+        },
+        end: function() {
+            console.log("end");
+        }
+    }
+});
 
 function onPDYTPlayerReady () {
   console.log("準備完成")
