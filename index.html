@@ -1,52 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./css/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="./css/PDYTPlayer.css">
-  <link rel="stylesheet" href="./css/index.css">
-  <script src="./js/PDYTPlayer.min.js" defer></script>
-</head>
-<body>
-  <div>
-  </div>
-  <button id="test">插入PDYTPlayer</button>
-  <script>
-    //https://www.youtube.com/watch?v=hNoeDi0G5Xo
-    //https://www.youtube.com/watch?v=4Uc00FPs27M&ab_channel=%E5%85%AC%E8%A6%96%E7%B6%B2%E8%B7%AF%E7%9B%B4%E6%92%AD%E9%A0%BB%E9%81%93
-    document.getElementById("test").onclick = function (){
-      var player = PDYTPlayer({
-        videoId: "hNoeDi0G5Xo", //預設影片ID
-        volume: 10,             //預設音量
-        mute: false,            //預設靜音
-        live: true,             //直播影片
-        panel: [        
-          "play",       //播放鍵
-          "timebar",    //進度條
-          "time",       //進度時間
-          "mute",       //靜音鍵
-          "volume",     //音量鍵
-          "rate",       //速率鍵
-          "full",       //影片
-          // "cc"
-        ]
-      });
-      document.body.children[0].appendChild(player)
-      onYouTubeIframeAPIReady()
-    }
-    
-    function onPDYTPlayerReady () {
-      console.log("準備完成")
-    };
-    function onPDYTPlayerStart () {
-      console.log("開始")
-    };
-    function onPDYTPlayerEnd () {
-      console.log("結束")
-    };
-  </script>
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="./css/PDPlayer.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <script src="https://pardnchiu.github.io/PDExtension-js/PDExtension.min.js" copyright="Pardn Ltd"></script>
+        <script src="./js/PDPlayer.min.js" defer></script>
+    </head>
+
+    <body>
+        <div></div>
+        <section>
+            <button id="sample">插入Sample影片</button>
+            <button id="youtube">插入Youtube影片</button>
+        </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+
+                document.getElementById("sample").onclick = function () {
+                    const player = new PDPlayer({
+                        src: "/img/sample.mp4",
+                        volume: 100,
+                        mute: false,
+                        panel: [
+                            "play",       //播放鍵
+                            "timebar",    //進度條
+                            "time",       //進度時間
+                            "mute",       //靜音鍵
+                            "volume",     //音量鍵
+                            "rate",       //速率鍵
+                            "full",       //影片
+                        ]
+                    });
+                    document.body.children[0].innerHTML = "";
+                    document.body.children[0].appendChild(player.body);
+                };
+
+                document.getElementById("youtube").onclick = function () {
+                    const player = new PDPlayer({
+                        videoId: "hvBHWOhPANk",
+                        live: false,
+                        volume: 100,
+                        mute: false,
+                        panel: [
+                            "play",       //播放鍵
+                            "timebar",    //進度條
+                            "time",       //進度時間
+                            "mute",       //靜音鍵
+                            "volume",     //音量鍵
+                            "rate",       //速率鍵
+                            "full",       //影片
+                        ]
+                    });
+                    document.body.children[0].innerHTML = "";
+                    document.body.children[0].appendChild(player.body);
+                };
+            });
+        </script>
+    </body>
+
 </html>
