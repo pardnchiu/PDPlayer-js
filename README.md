@@ -51,4 +51,4 @@ const player = new PDPlayer({
 ```
 <br>
 
-Copyright (c) 2022 [Pardn Ltd](mailto:mail@pardn.ltd)
+Copyright (c) 2023 [Pardn Ltd](mailto:mail@pardn.ltd)
