@@ -1,12 +1,12 @@
 # PDYTPlayer
 
-- Preview: [PDYTPlayer](https://pardnchiu.github.io/PDYTPlayer/)
+- Preview: [PDPlayer](https://pardnchiu.github.io/PDPlayer/)
 - Developer: [Pardn Chiu](mailto:chiuchingwei@icloud.com)
 - Icons: [Font Awesome 6](https://fontawesome.com)
 
 <br>
 
-簡易YTPlayer 控制器<br>
+簡易影片控制器 (包含 Youtube 影片)<br>
 
 按鈕可自由添加減少、排列組合<br>
 
@@ -48,18 +48,6 @@ const player = new PDPlayer({
         }
     }
 });
-
-function onPDYTPlayerReady () {
-  console.log("準備完成")
-};
-
-function onPDYTPlayerStart () {
-  console.log("開始")
-};
-
-function onPDYTPlayerEnd () {
-  console.log("結束")
-};
 ```
 <br>
 
